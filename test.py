@@ -71,7 +71,7 @@ if utilisateur == "Employé":
                 st.sidebar.success(f"Bienvenue {utilisateurs[matricule]['nom']}")
 
                 # Ouverture d'un nouvel onglet (à adapter en déploiement local)
-                js = f"window.open('http://localhost:8501/?matricule={matricule}')"
+                js = f"window.open('https://employes-avenire.streamlit.app/?matricule={matricule}')"
                 st.components.v1.html(f"<script>{js}</script>", height=0)
             else:
                 st.sidebar.error("Mot de passe incorrect")
